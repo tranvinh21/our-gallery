@@ -1,6 +1,5 @@
 'use client';
 import Heading from './heading';
-
 export interface Image {
   id: number;
   src: string;

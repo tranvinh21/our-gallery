@@ -1,42 +1,36 @@
-import { useState } from "react";
-import { Link } from "react-router";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import { Link } from 'react-router';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <div className="mt-4 flex flex-col space-y-2">
+      <header style={{ padding: '1rem', backgroundColor: '#f0f0f0' }}>
+        <h1>My Simple UI Header</h1>
+      </header>
+
+      <main style={{ padding: '1rem', minHeight: 'calc(100vh - 130px)' }}>
+        <h2>Main Content Area</h2>
+        <p>This is where the main content of your application will go.</p>
+
+        <div className='mt-4 flex flex-col space-y-2'>
           <Link
-            to="/templates/random-layout"
-            className="text-blue-500 hover:underline"
+            to='/templates/random-layout'
+            className='text-blue-500 hover:underline'
           >
             View Template 02
           </Link>
         </div>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </main>
+
+      <footer
+        style={{
+          padding: '1rem',
+          backgroundColor: '#f0f0f0',
+          textAlign: 'center',
+        }}
+      >
+        <p> 2025 Simple UI Footer</p>
+      </footer>
     </>
   );
 }
