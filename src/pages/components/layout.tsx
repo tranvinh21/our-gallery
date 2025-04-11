@@ -30,7 +30,6 @@ function Layout({ images, heading, backgroundColor }: LayoutProps) {
     imageRefs.current.forEach((item) => {
       const scaleRidirection =
         +item.style.gridColumnStart <= COL_COUNT / 2 ? 1 : 0;
-      console.log(scaleRidirection, item.style.gridColumnStart);
       gsap.to(item, {
         scrollTrigger: {
           trigger: item,
@@ -47,7 +46,7 @@ function Layout({ images, heading, backgroundColor }: LayoutProps) {
 
   return (
     <div
-      className='w-full min-h-screen'
+      className='w-full min-h-screen overflow-x-hidden'
       style={{ backgroundColor: backgroundColor }}
     >
       {heading && (

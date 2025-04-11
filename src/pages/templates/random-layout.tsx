@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Image } from '../components/layout';
 import Layout from '../components/layout';
 import ReactLenis, { type LenisRef } from 'lenis/react';
